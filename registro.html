@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <head>
+        <title>Rafifi</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Clothing Store">
+        <meta name="keywords" content="Zapatillas Ropa Accesorios">
+        <meta name="author" content="Nicolas Sanchez">
+        <meta name="viewport" content="width=device-width, initial scale 1.0">
+        <meta name="accept-lenguage" content="es-AR">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header class="header">
+        <div class="headerDiv">
+            <section>
+                <div class="logo">
+                    <a href="/index.html"><img src="/img/rafa.png" alt="logo"></a>
+                </div>
+            </section>
+            <section>
+                <nav>
+                    <ul class="navLinks">
+                        <li class="liHombre"><a href="#inicio" class="dropdownHombre">HOMBRE</a>
+                        <div class="dropdownContenedor">
+                            <a class="dropdownItem" href="#">Zapatillas</a>
+                            <a class="dropdownItem" href="#">Ropa</a>
+                        </div>
+                        </li>
+                        <li class="liMujer"><a href="#inicio" class="dropdownMujer">MUJER</a>
+                        <div class="dropdownContenedor">
+                            <a class="dropdownItem" href="#">Zapatillas</a>
+                            <a class="dropdownItem" href="#">Ropa</a>
+                        </div>
+                        </li>
+                        <li class="liNiños"><a href="#inicio" class="dropdownNiños">NIÑOS</a>
+                        <div class="dropdownContenedor">
+                            <a class="dropdownItem" href="#">Zapatillas</a>
+                            <a class="dropdownItem" href="#">Ropa</a>
+                        </div>
+                        </li>
+                        <li class="liAccesorios"><a href="#inicio" class="dropdownAccesorios">ACCESORIOS</a>
+                        <div class="dropdownContenedor">
+                            <a class="dropdownItem" href="#">Ver todo en Accesorios</a>
+                            <a class="dropdownItem" href="#">Hombre</a>
+                            <a class="dropdownItem" href="#">Mujer</a>
+                        </div>
+                        </li>
+                        <li class="liSale"><a href="#inicio" class="dropdownSale">SALE</a>
+                        <div class="dropdownContenedor">
+                            <a class="dropdownItem" href="#">Zapatillas</a>
+                            <a class="dropdownItem" href="#">Ropa</a>
+                            <a class="dropdownItem" href="#">Ver todo en Sale</a>
+                        </div>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="buscadorProductos">
+                <div>
+                    <input type="text" placeholder="Buscar..." >
+                    <div class="divBuscar"><img class="btnBuscar" src="img/buscar.svg"></div>
+                </div>
+            </section>
+            <section>
+                <div class="loginUsuario"><a href="/login.html"><input type="button" id="bntDivLogin" class="btnLogin"></a></div>
+                <div  class="carrito">
+                    <a href="#">
+                        <img src="/img/carrito.svg" alt="carrrito compras" id="btnCarrito">
+                        <div class="cuentaCarrito">
+                            <span class="contador">0</span>
+                        </div>
+                    </a>
+                </div>
+            </section>    
+        </div>
+    </header>
+    <form class="formRegistro">
+        <div class="registro">
+            <div>
+                <label class="labelRegistro">Email</label>
+                <input class="inputRegistro" type="email">
+            </div>
+            <div>
+                <label class="labelRegistro">Nombre y apellido</label>
+                <input class="inputRegistro" type="text">
+            </div>
+            <div>
+                <label class="labelRegistro">Contraseña</label>
+                <input class="inputRegistro" type="password">
+            </div>
+            <div>
+                <label class="labelRegistro">Confirmar contraseña</label>
+                <input class="inputRegistro" type="password">
+            </div>
+            <div>
+                <button class="btnRegistro" type="submit">Registrarse</button>
+                <a class="cuentaCreada" href="/login.html">¿Ya tiene una cuenta?</a>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

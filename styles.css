@@ -1,0 +1,667 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+body {
+    background-color: #d2d3cd;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 5px 10%;
+    position: sticky;
+    z-index: 10;
+    top: 0px;
+    width: 100%;
+    background-color: #0B4C5F;
+}
+
+header .logo img {
+    height: 60px;
+    width: auto;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.headerDiv {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px 0 10px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.header .navLinks li {
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .navLinks a {
+    font-size: 20px;
+    color:#ffff;
+    text-decoration: none;
+}
+
+.header .navLinks li a:hover {
+    color: #58a2f7;
+}
+
+
+.buscadorProductos {
+    position: relative;
+    top: 20px;
+    right: -30px;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+}
+
+.buscadorProductos input {
+    box-sizing: border-box;
+    outline: none;
+    height: 25px;
+    width: 0;
+    padding: 0 15px;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid #0000 ;
+    transition: all .7s ease;
+}
+
+.buscadorProductos input::placeholder {
+    color: #aaaa;
+}
+
+.divBuscar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 55px;
+    width: 45px;
+    height: 45px;
+    background: #ffff;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .7s;
+    border: solid 2px #d2d3cd;
+}
+
+.buscadorProductos:hover input{
+    width: 200px;
+}
+
+.divBuscar:hover{
+    transform: rotate(-360deg);
+    background: #58a2f7;
+}
+
+.btnLogin {
+    position: relative;
+    top: 40px;
+    width: 20px;
+    height: 40px;
+    background:url(/img/perfil.svg) no-repeat center;
+    cursor: pointer;
+    border: none;
+}
+
+.carrito {
+    position: relative;
+    top: 3px;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+
+.cuentaCarrito {
+    display: inline-block;
+    position: relative;
+    top: -40px;
+    right: -20px;
+    background: #ffff;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.cuentaCarrito:hover {
+    background: #58a2f7;
+}
+
+.contador {
+    margin: 5px;
+}
+
+.dropdownContenedor {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdownContenedor a {
+    padding: 12px 16px;
+    display: block;
+    width: 100%;
+    font-size: 15px !important;
+}
+
+.dropdownContenedor a:hover {
+    background-color: #3a2d2df1;
+}
+
+.liHombre:hover .dropdownHombre {
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.liHombre:hover .dropdownContenedor {
+    display: block;
+    border-radius: 2px;
+}
+
+.liMujer:hover .dropdownContenedor {
+    display: block;
+    border-radius: 2px;
+}
+
+.liMujer:hover .dropdownMujer {
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.liNiños:hover .dropdownContenedor {
+    display: block;
+    border-radius: 2px;
+}
+
+.liNiños:hover .dropdownNiños {
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.liAccesorios:hover .dropdownContenedor {
+    display: block;
+    border-radius: 2px;
+}
+
+.liAccesorios:hover .dropdownAccesorios {
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.liSale:hover .dropdownContenedor {
+    display: block;
+    border-radius: 2px;
+}
+
+.liSale:hover .dropdownSale {
+    background-color: #000;
+    border-radius: 2px;
+}
+
+.loginUsuario input {
+    position: absolute;
+    left: 90%;
+    top: 20%;
+}
+
+.loginForm {
+    box-sizing: border-box;
+    max-width: 300px;
+    position: relative;
+    margin: 50px auto;
+    display: block;
+}
+
+.labelLogin {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.inputLoginDatos {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color:#c1d1eb;
+    border: solid 1px #7e848f;
+    border-radius: 2px;
+    padding: 10px;
+    color: #000;
+}
+
+.btnLoginSesion {
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 0.875rem;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color:#167a99;
+    border: solid 1px #7e848f;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #ffff;
+}
+
+.inputLoginSesion {
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 0.875rem;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color:#167a99;
+    border: solid 1px #7e848f;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #ffff;
+}
+
+.inputLoginSesion:hover {
+    background-color: #0B4C5F;
+}
+
+.recuperarContraseña {
+    text-align: center;
+    margin-bottom: 15px;    
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.formRecupero {
+    box-sizing: border-box;
+    max-width: 300px;
+    position: relative;
+    margin: 50px auto;
+    display: block;
+}
+
+.labelCorreo {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.confirmar {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color:#167a99;
+    border: solid 1px #7e848f;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #ffff;
+}
+
+.confirmar:hover {
+    background-color: #0B4C5F;
+}
+
+.confirmarCorreo {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color:#ffff;
+    border: solid 1px #7e848f;
+    border-radius: 2px;
+    padding: 10px;
+    color: #000;
+}
+
+.volverLogin {
+    font-size: small;
+    color: #0B4C5F;
+}
+
+.formRegistro {
+    box-sizing: border-box;
+    max-width: 300px;
+    position: relative;
+    margin: 50px auto;
+    display: block;
+}
+
+.labelRegistro {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.inputRegistro {
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color:#ffff;
+    border: solid 1px #7e848f;
+    border-radius: 3px;
+    padding: 10px;
+    color: #000;
+}
+
+.btnRegistro {
+    display: block;
+    text-align: center;
+    font-size: 0.875rem;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color:#167a99;
+    border: solid 1px #7e848f;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #ffff;
+}
+
+.cuentaCreada {
+    display: block;
+    text-align: center;
+    font-size: small;
+    color: #0B4C5F;
+    
+}
+
+.contentItemCarrusel {
+    height: 95vh;
+    overflow: hidden;
+}
+
+.itemCarrusel {
+    height: 100%;
+    position: relative;
+}
+
+.tarjetaCarrusel {
+    height: 100%;
+}
+
+.flechasCarrusel {
+    height: 100%;
+    position:absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#tarjetaCarrusel-1 img {
+    width: 100%;
+    object-fit:contain
+}
+
+#tarjetaCarrusel-2 img{
+    width: 100%;
+    object-fit: contain;
+}
+
+#tarjetaCarrusel-3 img {
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+}
+
+#contentPuntos {
+    display: flex;
+    justify-content:center;
+    border-radius: 2px;
+}
+
+#contentPuntos a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #30555b;
+}
+
+.separador {
+    width: 100%;
+    height: 25px;
+    background-color: #0B4C5F;
+}
+
+.separador p {
+    display: flex;
+    justify-content: center;
+    padding-top: 3px;
+    color: #d2d3cd;
+}
+
+.overlayImg{
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    margin: 20px 0px;
+    background-image: url(img/zapas.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.overlayImg::after{
+    content: "Zapatillas";
+    font-size: 2rem;
+    color: #ffff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.overlayImg:hover::after {
+    transform: translateY(0);
+}
+.overlayImg-2{
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    margin: 20px 0px;
+    background-image: url(img/ropa.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.overlayImg-2::after{
+    content: "Ropa";
+    font-size: 2rem;
+    color: #ffff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.overlayImg-2:hover::after {
+    transform: translateY(0);
+}
+
+.overlayImg-3{
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    margin: 20px 0px;
+    background-image: url(img/gorra.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.overlayImg-3::after{
+    content: "Accesorios";
+    font-size: 2rem;
+    color: #ffff;
+    background-color: #16456198;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.overlayImg-3:hover::after {
+    transform: translateY(0);
+}
+
+.contenedorOverlay {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contentArticle {
+    display: flex;
+    justify-content: space-around;
+}
+
+article {
+    top: 20px;
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+}
+
+article img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+
+article img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+article:hover {
+    transform: 
+    perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+
+article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( 
+    to bottom,
+    transparent 10%,
+    rgba(0,0,0,0.5)50%,
+    rgba(0,0,0)95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+}
+
+article {
+    top: 20px;
+    position: relative;
+    width: 250px;
+    transition: all .3s ease;
+}
+
+article img:first-child {
+    box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+    border-radius: 4px;
+    object-fit: cover;
+    width: 100%;
+}
+
+article img:last-child {
+    position: absolute;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateY(25%);
+    transition: all .3s ease;
+    opacity: 0;
+}
+
+article:hover {
+    transform: 
+    perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+
+article::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( 
+    to bottom,
+    transparent 10%,
+    rgba(0,0,0,0.5)50%,
+    rgba(0,0,0)95%
+    );
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+article:hover::before {
+    opacity: 1;
+}
+
+article:hover img:last-child {
+    opacity: 1;
+    transform: translateY(10%);
+}
